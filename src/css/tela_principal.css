@@ -11,3 +11,21 @@ body{
     margin-top: 90px;
 
 }
+
+#myModal{
+    color: rgb(0, 0, 0);
+}
+#exampleModalLabel{
+    font-weight: 700;
+}
+.modal-content{
+    background-color:#0d6af4;
+    color: aliceblue;
+}
+
+/* #notebooks{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 1000px;
+} */

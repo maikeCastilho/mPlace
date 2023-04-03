@@ -1,70 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/5f18a24258.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/tela_principal.css">
-    <title>MarcketPlace</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/5f18a24258.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/tela_principal.css">
+  <title>MarcketPlace</title>
 </head>
+
 <body>
-    <!-- Tela Principal -->
-    <nav class="navbar bg-body-tertiary bg-dark" data-bs-theme="dark">
-        <div class="container-fluid  container-md">
-          <a class="navbar-brand" href="#">TechParts</a>
+  <!-- Tela Principal -->
+  <nav class="navbar bg-body-tertiary bg-dark" data-bs-theme="dark">
+    <div class="container-fluid  container-md">
+      <a class="navbar-brand" href="#">TechParts</a>
 
-          <i class="fa-solid fa-cart-shopping btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
-        
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              ...
-            </div>
-          </div>
-        
+      <i class="fa-solid fa-cart-shopping btn btn-primary" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrinho de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-      </nav>
-      <ul class="nav nav-tabs  container-md" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Notebooks</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cadeira Gamer</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Gadgets</button>
-        </li>
-       
-      </ul>
-      <div class="container  container-md" id="myTabContent">
-        
-        <div class="tab-pane fade show active row " id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-          <div class="card " style="width: 18rem; height: 30rem;">
-            <img src="assets/img/Prancheta 1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-text">Notebook HP Intel Core i3 8GB 256GB SSD 15,6” - Windows 11</h5>
-              <h3 class="card-title">$2.699,00</h3>
-              <p class="card-text">em até 10x de R$ 269,90 sem juros</p>
-            </div>
+        <div class="offcanvas-body">
+          <hr>
+
+          <ul id="cart" class="list-group"></ul>
+          <p id="total-price">Total: R$ 0,00</p>
+
+          <div class="offcanvas-bottom">
+            <a href="pagamento.html"><button class="btn btn-primary">Fechar Pedido</button></a>
           </div>
 
-          
-
-
         </div>
-       
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
-        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
       </div>
 
-    <script src="js/cadastro.js"></script>
+    </div>
+  </nav>
+  <ul class="nav nav-tabs  container-md" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+        role="tab" aria-controls="home-tab-pane" aria-selected="true">Notebooks</button>
+    </li>
+
+   
+
+  </ul>
+
+  <!-- CONTEUDO DE NOTEBOOKS -->
+  <div class="container  container-md" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/Prancheta 1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Notebook HP Intel Core i3 8GB 256GB SSD 15,6” - Windows 11</h5>
+                <h3 class="card-text">$2.699,00</h3>
+                <p class="card-text">em até 10x de R$ 269,90 sem juros</p>
+                <button id="myButton" class="btn btn-primary add-to-cart" data-price="2699">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/acer.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Notebook Gamer Acer Nitro 5 Intel Core i7-11800H, GeForce GTX 1650</h5>
+                <h3 class="card-text">$5.299,99</h3>
+                <p class="card-text"></p>
+                <button id="myButton" class="btn btn-primary add-to-cart" data-price="2699">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/predator.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Notebook Gamer Acer Nitro 5 Intel Core i7-11800H, GeForce GTX 1650</h5>
+                <h3 class="card-text">$5.299,99</h3>
+                <p class="card-text"></p>
+                <button id="myButton" class="btn btn-primary add-to-cart" data-price="2699">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/predator.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Notebook Gamer Acer Nitro 5 Intel Core i7-11800H, GeForce GTX 1650</h5>
+                <h3 class="card-text">$5.299,99</h3>
+                <p class="card-text"></p>
+                <button id="myButton" class="btn btn-primary add-to-cart" data-price="2699">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/predator.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Notebook Gamer Acer Nitro 5 Intel Core i7-11800H, GeForce GTX 1650</h5>
+                <h3 class="card-text">$5.299,99</h3>
+                <p class="card-text"></p>
+                <button id="myButton" class="btn btn-primary add-to-cart" data-price="2699">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    
+
+
+
+
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script src="js/carrinho.js"></script>
+
+
+
 </body>
+
 </html>
