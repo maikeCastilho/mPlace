@@ -1,5 +1,13 @@
 body{
-    background-color: aliceblue;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:aliceblue;
+   
 }
 
+.fa-solid{
+    color: aliceblue;
+    
+}
+#myTabContent{
+    margin-top: 90px;
+
+}
