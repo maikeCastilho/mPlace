@@ -52,8 +52,8 @@ function validarNome() {
     let nome = nomeInput.value.trim();
     let nomeErro = document.getElementById("nome-erro");
     if (nome.length === 0) {
-        nomeInput.style.borderColor = "red";
-        nomeErro.innerHTML = "Por favor, digite seu nome";
+        nomeInput.style.borderColor = "red"
+        nomeErro.innerHTML = "por favor, digite seu nome";
         nomeErro.style.color = "red"
     } else {
         nomeInput.style.borderColor = "";
@@ -62,7 +62,7 @@ function validarNome() {
     }
 }
 
-function validarEmail() {
+function validarEmail() {//VALIDANDO EMAIL
     let email = emailInput.value.trim();
     let emailErro = document.getElementById("email-erro");
     if (email.length === 0) {
@@ -127,7 +127,7 @@ submitButton.addEventListener("click", function (event) {
 function submeterFormulario() {
     if (nomeInput.style.borderColor === "" && emailInput.style.borderColor === "" &&
         senhaInput.style.borderColor === "" && confirmaSenhaInput.style.borderColor === "") {
-        
+
         // Armazenando os dados do usuário no localStorage somente após a validação dos campos
         let usuario = {
             nome: nomeInput.value.trim(),
@@ -142,3 +142,13 @@ function submeterFormulario() {
         window.location.href = "index.html";
     }
 }
+
+function validaSenha(){
+    const bvindas = document.getElementById("mensagem");
+    bvindas.innerHTML = `<h1>Bem vindo, ${usuario.nome}`;
+}
+
+    let usuarioString = localStorage.getItem("usuario");
+    let usuario = JSON.parse(usuarioString);
+    bemVindo(usuario); 
+
