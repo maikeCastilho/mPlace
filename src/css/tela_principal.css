@@ -1,25 +1,28 @@
-body{
-    background-color:aliceblue;
-   
+body {
+    background-color: aliceblue;
+    margin-bottom: 200px;
 }
 
-.fa-solid{
+.fa-solid {
     color: aliceblue;
-    
+
 }
-#myTabContent{
+
+#myTabContent {
     margin-top: 90px;
 
 }
 
-#myModal{
+#myModal {
     color: rgb(0, 0, 0);
 }
-#exampleModalLabel{
+
+#exampleModalLabel {
     font-weight: 700;
 }
-.modal-content{
-    background-color:#0d6af4;
+
+.modal-content {
+    background-color: #0d6af4;
     color: aliceblue;
 }
 
@@ -29,3 +32,11 @@ body{
     gap: 40px;
     width: 1000px;
 } */
+
+
+#star {
+    color: rgb(255, 217, 0);
+    margin-bottom: 20px;
+}
+
+
